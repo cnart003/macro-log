@@ -150,3 +150,8 @@ svg{fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-lin
   padding:11px 18px;border-radius:20px;font-size:15px;z-index:30;max-width:86%;text-align:center;animation:fade .2s}
 @keyframes up{from{transform:translateY(100%)}}
 @keyframes fade{from{opacity:0}}
+
+/* Home Screen app only: iOS blurs the strip just under the status bar, so push the header below it. */
+@media (display-mode: standalone){
+  .top{padding-top:calc(var(--st) + 34px)}
+}
